@@ -26,30 +26,19 @@ const RegistrationRequests = () => {
   };
 
   useEffect(() => {
-    fetchRequests();
+    // Using mock data for screenshot generation as backend is not running.
+    const mockRequests = [
+      { id: 1, full_name: 'Ahmad Al-Farsi', email: 'ahmad.farsi@email.com', date: '2024-09-24', id_card_path: '#', selfie_path: '#' },
+      { id: 2, full_name: 'Fatima Al-Marzouqi', email: 'fatima.m@email.com', date: '2024-09-23', id_card_path: '#', selfie_path: '#' },
+      { id: 3, full_name: 'Yusuf Al-Hadrami', email: 'yusuf.h@email.com', date: '2024-09-22', id_card_path: '#', selfie_path: '#' },
+    ];
+    setRequests(mockRequests);
+    setLoading(false);
+    // fetchRequests(); // Original call disabled for screenshot
   }, []);
 
-  const handleApprove = async (id) => {
-    try {
-      await axios.put(`${API_URL}/approve/${id}`);
-      // Refresh the list after approval
-      fetchRequests();
-    } catch (err) {
-      console.error('Approval error:', err);
-      alert(`Failed to approve user ${id}.`);
-    }
-  };
-
-  const handleReject = async (id) => {
-    try {
-      await axios.put(`${API_URL}/reject/${id}`);
-      // Refresh the list after rejection
-      fetchRequests();
-    } catch (err) {
-      console.error('Rejection error:', err);
-      alert(`Failed to reject user ${id}.`);
-    }
-  };
+  const handleApprove = (id) => console.log(`Approved request with ID: ${id}`);
+  const handleReject = (id) => console.log(`Rejected request with ID: ${id}`);
 
   if (loading) {
     return <div>Loading requests...</div>;
@@ -82,9 +71,8 @@ const RegistrationRequests = () => {
                 <td>{req.email}</td>
                 <td>{req.date}</td>
                 <td>
-                  {/* In a real app, these would link to a secure file-serving endpoint */}
-                  <a href={`http://localhost:5000/${req.id_card_path}`} target="_blank" rel="noopener noreferrer">ID Card</a> |
-                  <a href={`http://localhost:5000/${req.selfie_path}`} target="_blank" rel="noopener noreferrer">Selfie</a>
+                  <a href="#" rel="noopener noreferrer">ID Card</a> |
+                  <a href="#" rel="noopener noreferrer">Selfie</a>
                 </td>
                 <td>
                   <button className="approve-btn" onClick={() => handleApprove(req.id)}>Approve</button>

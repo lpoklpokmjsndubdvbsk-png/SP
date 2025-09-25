@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:padding="24dp"
+    tools:context=".KycActivity">
+
+    <TextView
+        android:id="@+id/textViewKycTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Identity Verification (KYC)"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/textViewKycSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Please upload the required documents to verify your account."
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewKycTitle"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonUploadId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/white"
+        android:text="Upload ID Card / Passport"
+        android:textColor="@color/colorPrimary"
+        app:icon="@android:drawable/ic_menu_upload"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewKycSubtitle" />
+
+    <TextView
+        android:id="@+id/textViewIdStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No file selected"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="@id/buttonUploadId"
+        app:layout_constraintTop_toBottomOf="@id/buttonUploadId"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonUploadSelfie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:text="Upload a Selfie"
+        android:textColor="@color/colorPrimary"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewIdStatus" />
+
+    <TextView
+        android:id="@+id/textViewSelfieStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No file selected"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="@id/buttonUploadSelfie"
+        app:layout_constraintTop_toBottomOf="@id/buttonUploadSelfie"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonSubmitKyc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Submit for Review"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="14dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

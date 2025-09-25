@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Sypay Brand Colors -->
+    <color name="colorPrimary">#1A523A</color> <!-- Dark Green -->
+    <color name="colorPrimaryDark">#14422E</color> <!-- Darker Green -->
+    <color name="colorAccent">#4CAF50</color> <!-- A slightly lighter green for accents -->
+    <color name="light_gray">#F5F5F5</color> <!-- Light Gray for backgrounds -->
+    <color name="dark_gray">#A9A9A9</color> <!-- Dark Gray for text/icons -->
+</resources>
