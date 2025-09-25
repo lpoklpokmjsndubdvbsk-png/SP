@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import RegistrationRequests from './RegistrationRequests';
+import RegistrationRequests from './components/RegistrationRequests';
 
 function App() {
   return (
